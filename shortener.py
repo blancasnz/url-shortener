@@ -8,7 +8,7 @@ from models import URL, Base
 
 
 class URLStore:
-    def __init__(self, base_url: str = "http://localhost:5000/", db_url: str = "sqlite:///urls.db") -> None:
+    def __init__(self, base_url: str = "http://localhost:8000/", db_url: str = "sqlite:///urls.db") -> None:
         """Initialize the URLStore with a base URL"""
         self.engine = create_engine(db_url)
         Base.metadata.create_all(self.engine)

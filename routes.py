@@ -27,4 +27,4 @@ def get_original_url(short_id: str):
     return jsonify({"original_url": long_url}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=8000)
