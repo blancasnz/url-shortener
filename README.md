@@ -31,7 +31,7 @@ pip install -r requirements.txt
 python routes.py
 ```
 
-The service will run on `http://localhost:5000/`.
+The service will run on `http://localhost:8000/`.
 
 ---
 
@@ -43,22 +43,22 @@ The service will run on `http://localhost:5000/`.
 
 ```sh
 # Curl
-curl -X POST "http://localhost:5000/shorten" \
+curl -X POST "http://localhost:8000/shorten" \
      -H "Content-Type: application/json" \
-     -d '{"url": "www.example.com"}' 
+     -d '{"url": "www.example1.com"}' 
 
 # Postman
-POST http://localhost:5000/shorten
+POST http://localhost:8000/shorten
 Content-Type: application/json
 
 {
-  "url": "www.example.com"
+  "url": "www.example1.com"
 }
 ```
 **Response:** 
 ```
 {
-    "short_url": "http://localhost:5000/80fc0f"
+    "short_url": "http://localhost:8000/HZxBBK"
 }
 ```
 
@@ -69,15 +69,15 @@ Content-Type: application/json
 
 ```sh
 # Curl
-curl 'http://localhost:5000/80fc0f'
+curl 'http://localhost:8000/HZxBBK'
 
 # Postman
-GET http://localhost:5000/80fc0f
+GET http://localhost:8000/HZxBBK
 ```
 **Response:** 
 ```sh
 { 
-  "original_url": "www.example.com" 
+  "original_url": "www.example1.com" 
 }
 ```
 
